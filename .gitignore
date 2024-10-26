@@ -6,6 +6,9 @@
 /out-tsc
 /bazel-out
 
+InventoryAPI/bin/
+InventoryAPI/obj/
+
 # Node
 /node_modules
 npm-debug.log
