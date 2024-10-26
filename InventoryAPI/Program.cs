@@ -1,11 +1,10 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container, including InventoryContext with SQLite
+// Use the InventoryDatabase connection string from appsettings.json
 builder.Services.AddDbContext<InventoryContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("InventoryDatabase")));
 
 var app = builder.Build();
 
