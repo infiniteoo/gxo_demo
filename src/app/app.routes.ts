@@ -9,11 +9,11 @@ import { SuppliersComponent } from './components/suppliers/suppliers.component';
 
 export const routes: Routes = [
   { path: 'items', component: ItemListComponent },
-{path: 'items/:id', component: ItemDetailComponent},
+  { path: 'items/:id', component: ItemDetailComponent },
   { path: 'warehouses', component: WarehousesComponent },
   { path: 'suppliers', component: SuppliersComponent },
   { path: 'employees', component: EmployeesComponent },
   { path: 'inventory-log', component: InventorylogComponent },
   { path: '', redirectTo: '/items', pathMatch: 'full' },
-{path: 'add-item', component: ItemFormComponent}
+  { path: 'add-item', component: ItemFormComponent },
 ];

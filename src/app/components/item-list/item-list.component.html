@@ -1,1 +1,22 @@
-<p>item-list works!</p>
+<div class="item-list">
+    <h2>Inventory Items</h2>
+    <ul>
+      <li *ngFor="let item of items" (click)="viewItem(item)">
+        <div>
+          <span class="item-name">{{ item.name }}</span> - 
+          <span class="item-quantity">Qty: {{ item.quantity }}</span>
+        </div>
+        <div class="item-actions">
+          <button (click)="editItem(item); $event.stopPropagation()">Edit</button>
+          <button (click)="deleteItem(item.id); $event.stopPropagation()">Delete</button>
+        </div>
+      </li>
+    </ul>
+    <div *ngFor="let item of items">
+        <p>{{ item.name }} - Quantity: {{ item.quantity }} - Price: {{ item.price }}</p>
+        <button (click)="viewItem(item.id)">View Details</button>
+        <button (click)="editItem(item.id)">Edit</button>
+        <button (click)="deleteItem(item.id)">Delete</button>
+      </div>
+  </div>
+  

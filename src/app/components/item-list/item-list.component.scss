@@ -1,0 +1,31 @@
+.item-list {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .item-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .item-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .item-list li:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .item-name {
+    font-weight: bold;
+  }
+  
+  .item-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
