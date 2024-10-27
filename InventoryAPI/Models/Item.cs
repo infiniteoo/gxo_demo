@@ -1,18 +1,13 @@
 // Models/Item.cs
-
-public class Item
+namespace InventoryAPI.Models
 {
-
-    public int ItemId { get; set; }
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public decimal Price { get; set; }
-    public int Quantity { get; set; }
-    public int SupplierId { get; set; }
-    public int WarehouseId { get; set; }
-
-
-
-
-
+    public class Item
+    {
+        public int Id { get; set; } // Primary key
+        public string Name { get; set; }
+        public int Quantity { get; set; }
+        public decimal Price { get; set; }
+        public string? Description { get; set; } // Make this nullable
+        public int? SupplierId { get; set; }   
+    }
 }
